@@ -18,6 +18,8 @@ class addMovimento(forms.Form):
     anagrafiche_choices += [(anagrafica.id, anagrafica.nome) for anagrafica in Anagrafiche.objects.all().order_by('nome')]
 
     carte_choices =[('','Nessuno')]
+
+
     carte_choices+=[(carta.id, carta.nome) for carta in CartaDiCredito.objects.all().order_by('nome')]
 
     #carte_choices.append(('','Nessuno'))
