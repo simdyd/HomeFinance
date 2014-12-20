@@ -1,0 +1,25 @@
+<div class="panel col-md-6">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Movimenti Fornitore</h3>
+
+            		</div>
+                    <div class="panel-body stats_charts_movimenti_fornitore">
+
+
+    <table class="visualize-chart stats_movimenti_fornitore" id="areachart_movimenti_fornitore" rel="line">
+                            <caption>Movimenti Fornitore</caption>
+
+                            <tbody>
+
+                                    {% for val in movimenti_fornitore %}
+                                        <tr>
+                                        <th scope="col">{{ val.fornitore__nome }}</th>
+                                        <td>{{ val.valore_sum }}</td>
+                                        </tr>
+                                    {% endfor %}
+
+
+                            </tbody>
+                        </table>
+    </div>
+</div>

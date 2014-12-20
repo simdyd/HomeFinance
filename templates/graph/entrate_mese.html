@@ -1,0 +1,28 @@
+<div class="panel col-md-6">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Entrate</h3>
+
+            		</div>
+                    <div class="panel-body stats_charts_entrate">
+
+    <table class="visualize-chart stats_entrate" id="areachart_entrate" rel="line">
+                            <caption>Entrate</caption>
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    {% for val in entrate %}
+                                    <th scope="col">{{ val.anno }}-{{ val.mese }}</th>
+                                    {% endfor %}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    {% for val in entrate %}
+                                        <td>{{ val.valore__sum }}</td>
+                                    {% endfor %}
+                                </tr>
+
+                            </tbody>
+                        </table>
+    </div>
+</div>

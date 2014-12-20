@@ -1,0 +1,21 @@
+{% extends 'page/base.html' %}
+
+{%  block content %}
+
+    <h3>Saldo {{ saldo }} Euro</h3>
+
+    <div class="row">
+    {% include 'graph/entrate_mese.html' %}
+
+    {% include 'graph/uscite_mese.html' %}
+    </div>
+
+    <div class="row">
+    {%  include 'graph/uscite_gruppo_mc.html' %}
+    {%  include 'graph/uscite_gruppo_mp.html' %}
+    </div>
+
+    <div class="col-lg-12">
+        {%  include 'block/elenco_gruppi.html' %}
+    </div>
+{% endblock %}

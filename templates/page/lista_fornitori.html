@@ -1,0 +1,17 @@
+{% extends 'page/base.html' %}
+
+{%  block content %}
+    <h3>Fornitori</h3>
+    <div class="col-lg-12">
+        <table class="table">
+            <tbody>
+                {%  for fornitore in lista_fornitori %}
+                    <tr>
+                    <td>{{ fornitore.nome }}</td>
+                    <td>{{ fornitore.get_valore }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

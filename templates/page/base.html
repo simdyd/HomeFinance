@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+
+{% include 'scheleton/header.html' %}
+
+<body>
+
+    {%  include 'scheleton/header_page.html' %}
+
+    {%  include 'scheleton/top_nav.html' %}
+
+    {% include 'scheleton/left_panel.html' %}
+
+
+
+    <section id="main_content">
+    	<div class="container-fluid">
+
+			{% block page_title %}<div class="page-header">
+			  <h1>Dashboard <small>Get a quick overview</small></h1>
+			</div>{% endblock %}
+
+			{% block breadcrumb %}<ol class="breadcrumb">
+			  <li><a href="#">Home</a></li>
+			  <li class="active">Dashboard</li>
+			</ol>{% endblock %}
+
+
+            {% block content %}
+
+            {% endblock %}
+
+
+
+
+        </div>
+    </section>
+
+
+    <script src="/static/assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+
+
+
+	<script type="text/javascript">
+		var config = {
+		  '.chzn-select'           : {},
+      '.chzn-select-deselect'  : {allow_single_deselect:false},
+      '.chzn-select-no-single' : {disable_search_threshold:10},
+      '.chzn-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chzn-select-width'     : {width:"95%"}
+
+		}
+		for (var selector in config) {
+		  $(selector).chosen(config[selector]);
+		}
+    </script>
+
+</body>
+</html>

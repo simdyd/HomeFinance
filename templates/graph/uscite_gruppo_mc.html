@@ -1,0 +1,25 @@
+<div class="panel col-md-6">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Uscite Gruppo Mese Corrente</h3>
+
+            		</div>
+                    <div class="panel-body stats_charts_uscite_gruppo_mc">
+
+
+    <table class="visualize-chart stats_uscite_gruppo_mc" id="areachart_uscite_gruppo_mc" rel="line">
+                            <caption>Uscite Gruppo</caption>
+
+                            <tbody>
+
+                                    {% for val in uscite_gruppo_mc %}
+                                        <tr>
+                                        <th scope="col">{{ val.centrodicosto__gruppo__nome }}</th>
+                                        <td>{{ val.valore_sum }}</td>
+                                        </tr>
+                                    {% endfor %}
+
+
+                            </tbody>
+                        </table>
+    </div>
+</div>

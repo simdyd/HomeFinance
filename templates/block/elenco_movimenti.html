@@ -1,0 +1,26 @@
+<table class="table">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Descrizione</th>
+                <th>Persona</th>
+                <th>Fornitore</th>
+                <th>Centro di Costo</th>
+                <th>Valore</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+    {%  for movimento in lista_movimenti %}
+        <tr>
+            <td>{{ movimento.data }}</td>
+            <td>{{ movimento.descrizione }}</td>
+            <td>{{ movimento.persona }}</td>
+            <td>{{ movimento.fornitore.nome }}</td>
+            <td><strong>{{ movimento.centrodicosto.gruppo.nome }}</strong> {{ movimento.centrodicosto.nome }}</td>
+            <td>{{ movimento.valore }}</td>
+            <td><a href="/modifica_movimento/{{ movimento.id }}/"><i class="icon-edit"></i></a></td>
+        </tr>
+    {% endfor %}
+        </tbody>
+    </table>

@@ -1,0 +1,25 @@
+{% extends 'page/base.html' %}
+
+{%  block content %}
+    <h3>{{ centrodicosto }}</h3>
+
+    <p>Totale {{ centrodicosto.get_valore }}</p>
+
+    <div class="row">
+    {% include 'graph/entrate_mese.html' %}
+    {% include 'graph/movimenti_fornitore.html' %}
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel">
+                <div class="panel-body">
+                    <a href="/new_movimento/{{ centrodicosto.id }}/" class="btn btn-primary">Aggiungi Movimento</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        {% include 'block/elenco_movimenti.html' %}
+    </div>
+{% endblock %}

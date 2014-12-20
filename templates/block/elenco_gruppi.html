@@ -1,0 +1,18 @@
+<table class="table">
+    {%  for gruppo in lista_gruppi %}
+        <tr><th>{{ gruppo }}</th>
+        <th>{{ gruppo.get_valore }}</th>
+            <th colspan="3">&nbsp;</th>
+        </tr>
+        {%  for cdc in gruppo.get_centridicosto %}
+            <tr>
+                <td>{{ cdc }}</td>
+                <td>{{ cdc.get_valore }}</td>
+                <td></td>
+                <td><a href="/dettaglio_cdc/{{ cdc.id }}/"><i class="icon-list"></i></a></td>
+                <td><a href="/new_movimento/{{ cdc.id }}/"><i class="icon-plus"></i></a></td>
+            </tr>
+            <div></div>
+        {%  endfor %}
+    {% endfor %}
+    </table>

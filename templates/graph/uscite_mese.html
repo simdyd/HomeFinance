@@ -1,0 +1,28 @@
+<div class="panel col-md-6">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Uscite</h3>
+
+            		</div>
+                    <div class="panel-body stats_charts_uscite">
+
+    <table class="visualize-chart stats_uscite" id="areachart_uscite" rel="line">
+                            <caption>Uscite</caption>
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    {% for val in uscite %}
+                                    <th scope="col">{{ val.anno }}-{{ val.mese }}</th>
+                                    {% endfor %}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    {% for val in uscite %}
+                                        <td>{{ val.valore__sum }}</td>
+                                    {% endfor %}
+                                </tr>
+
+                            </tbody>
+                        </table>
+    </div>
+</div>
